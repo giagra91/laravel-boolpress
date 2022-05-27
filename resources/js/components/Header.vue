@@ -14,7 +14,7 @@
                 </ul>
                 </div>
             </div>
-        <a href="/home" class="nav-item active">Login</a>
+        <a href="/home" class="nav-link nav-item active">Login</a>
         </nav>
     </div>
 </template>

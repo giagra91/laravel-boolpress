@@ -2022,6 +2022,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2035,6 +2046,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3325,9 +3341,11 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("a", { staticClass: "nav-item active", attrs: { href: "/home" } }, [
-          _vm._v("Login"),
-        ]),
+        _c(
+          "a",
+          { staticClass: "nav-link nav-item active", attrs: { href: "/home" } },
+          [_vm._v("Login")]
+        ),
       ]
     ),
   ])
@@ -3446,15 +3464,42 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container-fluid" }, [
+    _c("h1", [_vm._v("About Us")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row" },
+      _vm._l(6, function (element, index) {
+        return _c("div", { key: index, staticClass: "col-2" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src: "https://picsum.photos/id/5" + index + "/450/600",
+                alt: "",
+              },
+            }),
+            _vm._v(" "),
+            _vm._m(0, true),
+          ]),
+        ])
+      }),
+      0
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid" }, [
-      _c("h1", [_vm._v("About Us")]),
+    return _c("div", { staticClass: "card-body" }, [
+      _c("h5", { staticClass: "card-title" }, [_vm._v("Contattaci")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v("Seguici sui nostri social"),
+      ]),
     ])
   },
 ]
@@ -3487,7 +3532,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container-fluid" }, [
-      _c("h1", [_vm._v("\n        Titolo di prova della home\n    ")]),
+      _c("div", { staticClass: "row" }, [
+        _c("h3", [_vm._v("\n            Benvenuto nella Home\n        ")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: {
+              src: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+              alt: "",
+            },
+          }),
+        ]),
+      ]),
     ])
   },
 ]
