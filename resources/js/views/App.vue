@@ -4,19 +4,16 @@
         <main>
             <Main />
         </main>
-        <!-- <PostsList /> -->
     </div>
 </template>
 
 <script>
-// import PostsList from "../components/PostsList.vue";
 import Main from "../components/Main.vue";
 import Header from "../components/Header.vue";
 
 export default {
     name: "App",
     components:{
-        // PostsList,
         Main,
         Header
     },
@@ -29,6 +26,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+main{
+    min-height: 80vh;
+}
 
 </style>
