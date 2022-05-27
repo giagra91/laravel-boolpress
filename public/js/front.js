@@ -1994,7 +1994,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   data: function data() {
@@ -3416,8 +3415,6 @@ var render = function () {
           _vm._v(_vm._s(_vm.post.content.substring(0, 100) + "...")),
         ]),
       ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn btn-primary" }, [_vm._v("View more")]),
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
         _c("p", [
