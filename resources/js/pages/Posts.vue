@@ -25,7 +25,7 @@
 <script>
 import Post from "../components/Post.vue";
 export default {
-    name: "PostsList",
+    name: "Posts",
     components:{
         Post,
     },
