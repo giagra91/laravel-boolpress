@@ -3474,7 +3474,7 @@ var render = function () {
         return _c("div", { key: index, staticClass: "col-2" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
-              staticClass: "card-img-top",
+              staticClass: "card-img-top img-fluid",
               attrs: {
                 src: "https://picsum.photos/id/5" + index + "/450/600",
                 alt: "",
