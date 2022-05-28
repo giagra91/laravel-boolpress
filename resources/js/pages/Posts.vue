@@ -1,33 +1,41 @@
 <template>
     <div class="container-fluid">
-        <h2 class="text-center py-3 text-uppercase fw-bold">Lista dei post</h2>
-        <div class="row p-4">
-            <Post v-for="(post, index) in postsList" :key="index" :post="post" />
-            <div class="col-12 d-flex justify-content-center">
-            <nav aria-label="page-naivgation">
-                <ul class="pagination pagination-md">
-                    <li class="page-item">
-                        <a class="page-link" v-if="currentPage > 1" @click="getPostList(currentPage - 1)" >Previous</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" >{{ currentPage }}</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" v-if="currentPage < lastPage" @click="getPostList(currentPage + 1)" >Next</a>
-                    </li>
-                </ul>
-            </nav>
+        <div v-if="postsList.length > 6">
+            <h2 class="text-center py-3 text-uppercase fw-bold">Lista dei post 234</h2>
+            <div class="row p-4">
+                <Post v-for="(post, index) in postsList" :key="index" :post="post" />
+                <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="page-naivgation">
+                    <ul class="pagination pagination-md">
+                        <li class="page-item">
+                            <a class="page-link" v-if="currentPage > 1" @click="getPostList(currentPage - 1)" >Previous</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" >{{ currentPage }}</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" v-if="currentPage < lastPage" @click="getPostList(currentPage + 1)" >Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
             </div>
+        </div>
+        <div v-else>
+            <Loader />
         </div>
     </div>
 </template>
 
 <script>
 import Post from "../components/Post.vue";
+import Loader from "../components/Loader.vue";
+
 export default {
     name: "Posts",
     components:{
         Post,
+        Loader,
     },
     data: function(){
         return {
@@ -51,7 +59,8 @@ export default {
         }
     },
     created(){
-        this.getPostList(1);
+        setTimeout(this.getPostList, 3000, 1)
+        // this.getPostList(1);
     }
 }
 </script>
