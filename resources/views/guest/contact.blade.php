@@ -5,6 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 w-50 mx-auto">
+                
                 <form action="{{ route("guest.storeContact") }}" method="post">
                 
                     @csrf
@@ -26,6 +27,9 @@
                 
                     <button type="submit">Send</button>
                 </form>
+                <div class="text-center">
+                    Data e ora (ricavate con Carbon): {{$now}}
+                </div>
             </div>
         </div>
     </div>    

@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Mail\SendNewMail;
 use Illuminate\Support\Facades\Mail;
+use Carbon\Carbon;
 
 class ContactController extends Controller
 {
     public function contact(){
-        return view("guest.contact");
+        $now = new Carbon();
+        return view("guest.contact", compact("now"));
     }
 
     public function contactMailSender(Request $request){
