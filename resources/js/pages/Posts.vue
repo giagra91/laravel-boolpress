@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div v-if="postsList.length > 6">
-            <h2 class="text-center py-3 text-uppercase fw-bold">Lista dei post 234</h2>
+            <h2 class="text-center py-3 text-uppercase fw-bold">Lista dei post</h2>
             <div class="row p-4">
                 <Post v-for="(post, index) in postsList" :key="index" :post="post" />
                 <div class="col-12 d-flex justify-content-center">

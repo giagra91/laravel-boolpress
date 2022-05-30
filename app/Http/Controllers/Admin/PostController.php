@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\User;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 class PostController extends Controller
@@ -49,7 +50,8 @@ class PostController extends Controller
         $newPost->user_id = Auth::user()->id;
         $newPost->title = $data["title"];
         $newPost->content = $data["content"];
-        $newPost->image_url = $data["image_url"];
+        // $newPost->image_url = $data["image_url"];
+        $newPost->image_url = Storage::put('uploads', $data["image"]);
         $newPost->slug = Str::slug($data["title"], "-");
         $newPost->save();
 

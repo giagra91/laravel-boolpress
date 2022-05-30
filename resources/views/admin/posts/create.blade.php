@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
 
         <div class="col-6 py-3">
-            <form class="text-center" action="{{route("admin.posts.store")}}" method="POST">
+            <form class="text-center" action="{{route("admin.posts.store")}}" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="input-group mb-3">
                     <span class="input-group-text">Title</span>
@@ -26,9 +26,14 @@
                     <input type="text" class="form-control" name="content">
                 </div>
 
-                <div class="input-group mb-3">
+                {{-- <div class="input-group mb-3">
                     <span class="input-group-text">Image</span>
                     <input type="text" class="form-control" name="image_url">
+                </div> --}}
+
+                <div class=" mb-3">
+                    <span class="input-group-text">Image</span>
+                    <input type="file" class="form-control" name="image">
                 </div>
 
                 <button class="btn btn-primary" type="submit">Send</button>
