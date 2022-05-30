@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-6 w-50 mx-auto">
                 
-                <form action="{{ route("guest.storeContact") }}" method="post">
+                <form class="text-center mb-2" action="{{ route("guest.storeContact") }}" method="post">
                 
                     @csrf
 
@@ -25,7 +25,7 @@
                         <textarea type="text" class="form-control" id="userMessage" name="userMessage"></textarea>
                     </div>
                 
-                    <button type="submit">Send</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
                 </form>
                 <div class="text-center">
                     Data e ora (ricavate con Carbon): {{$now}}
