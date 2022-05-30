@@ -1929,6 +1929,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
@@ -3431,6 +3432,15 @@ var render = function () {
           "a",
           { staticClass: "nav-link nav-item active", attrs: { href: "/home" } },
           [_vm._v("Login")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "nav-link nav-item active",
+            attrs: { href: "/contacts" },
+          },
+          [_vm._v("Contattaci")]
         ),
       ]
     ),
